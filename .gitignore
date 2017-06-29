@@ -82,6 +82,8 @@ obj/
 .idea/dynamic.xml
 .idea/uiDesigner.xml
 .idea/gradle.xml
+.idea/runConfigurations.xml
+.idea/saveactions_settings.xml
 
 # Keystore files
 *.jks
