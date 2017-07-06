@@ -18,10 +18,12 @@
 
 package com.antonioleiva.mvpexample.app.login;
 
+import android.os.Bundle;
+
 public interface LoginView {
   void setUsernameError();
 
   void setPasswordError();
 
-  void navigateToHome(String username);
+  void navigateToHome(Bundle bundle);
 }

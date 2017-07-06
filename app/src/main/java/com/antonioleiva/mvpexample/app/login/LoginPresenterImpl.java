@@ -18,6 +18,8 @@
 
 package com.antonioleiva.mvpexample.app.login;
 
+import android.os.Bundle;
+
 public class LoginPresenterImpl implements LoginPresenter, LoginInteractor.OnLoginFinishedListener {
 
   private LoginView loginView;
@@ -55,7 +57,9 @@ public class LoginPresenterImpl implements LoginPresenter, LoginInteractor.OnLog
   @Override
   public void onSuccess(String username) {
     if (loginView != null) {
-      loginView.navigateToHome(username);
+      final Bundle bundle = new Bundle();
+      bundle.putString("username", username);
+      loginView.navigateToHome(bundle);
     }
   }
 }

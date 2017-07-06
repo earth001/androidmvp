@@ -60,9 +60,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView, View.
   }
 
   @Override
-  public void navigateToHome(String username) {
-    final Bundle bundle = new Bundle();
-    bundle.putString("username", username);
+  public void navigateToHome(Bundle bundle) {
     final Intent intent = new Intent(this, MainActivity.class);
     intent.putExtras(bundle);
     startActivity(intent);
